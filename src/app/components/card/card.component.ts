@@ -15,11 +15,7 @@ export class CardComponent {
   
   ngOnInit(): void {
     this.fetchService.dataString$.subscribe(
-      data => {
-        console.log(data)
-        this.characters = data;
-      }
+      data => { this.characters =  data }
     )
-    console.log('Card', this.characters)
   }
 }
