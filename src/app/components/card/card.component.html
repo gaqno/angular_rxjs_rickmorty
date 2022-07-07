@@ -1,0 +1,10 @@
+  <div class="container">
+    <mat-card *ngFor="let i of characters">
+        <button mat-button>
+          <mat-card-content>
+            <mat-card-title>{{i.name}}</mat-card-title>
+            <img mat-card-image src={{i.image}} alt="Image" style="max-width: 300px; max-height: 300px" >  
+          </mat-card-content>
+        </button>
+      </mat-card>
+    </div>

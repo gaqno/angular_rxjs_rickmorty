@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  mat-grid-tile {
+    background: lightblue;
+    color: white
+  }
+  mat-card{
+    width: fit-content;
+    margin: 1em;
+  }
+}
+.mat-card-header-text {
+  margin: 0 !important;
+}

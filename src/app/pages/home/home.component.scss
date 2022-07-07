@@ -1,0 +1,13 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #BFDE42;
+$secondary-color: #42B4CA;
+$font-color: #212445;
+
+* {
+  background-color: $primary-color;
+  height: auto;
+  p { font: 100% $font-color };
+  @media (max-width: 768px) {
+    background-color: $secondary-color;
+  }
+}

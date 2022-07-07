@@ -1,0 +1,17 @@
+
+img { width: 100vw }
+.container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  margin-bottom: 5vh;
+  input {
+    margin-top: 5vh;
+    width: 75vw;
+    height: 10vh;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font: 32px black;
+    text-align: center;
+  }
+}
