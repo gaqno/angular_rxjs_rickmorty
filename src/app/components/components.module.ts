@@ -4,10 +4,18 @@ import { MatCardModule } from "@angular/material/card";
 import { MaterialModule } from "../material.module";
 import { CardComponent } from "./card/card.component";
 import { HeaderComponent } from "./header/header.component";
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
-  declarations: [CardComponent, HeaderComponent],
-  exports: [CardComponent, HeaderComponent],
+  declarations: [
+    CardComponent,
+    HeaderComponent,
+    ProfileComponent
+  ],
+  exports: [
+    CardComponent,
+    HeaderComponent,
+    ProfileComponent],
   imports: [
     MaterialModule,
     CommonModule

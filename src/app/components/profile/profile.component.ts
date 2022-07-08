@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FetchService } from 'src/services/fetch/fetch.service';
 
 @Component({
-  selector: 'card-component',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'profile-component',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.scss']
 })
-export class CardComponent {
+export class ProfileComponent implements OnInit {
   characters: any;
   constructor(
     private fetchService: FetchService,
@@ -19,8 +19,8 @@ export class CardComponent {
       data => { this.characters =  data }
     )
   }
-
+  
   btnClick = () => {
-    this.router.navigateByUrl(`/details`)
+    this.router.navigateByUrl('')
   }
 }
