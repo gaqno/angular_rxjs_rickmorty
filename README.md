@@ -1,4 +1,6 @@
-# MyApp
+# Angular RxJS - Rick and Morty API
+
+[MIRO](https://miro.com/app/board/uXjVOnSxwGk=/?share_link_id=476796676453)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
 

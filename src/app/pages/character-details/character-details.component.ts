@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 import { ICharacter } from 'src/models/Character';
 import { FetchService } from 'src/services/fetch/fetch.service';
 
@@ -8,12 +9,12 @@ import { FetchService } from 'src/services/fetch/fetch.service';
   styleUrls: ['./character-details.component.scss']
 })
 export class CharacterDetailsComponent implements OnInit {
-  characters: Array<ICharacter> = [];
+  character: any;
   constructor(private fetchService: FetchService) { }
 
-  ngOnInit(): void {
-    this.getData();
-   }
+  ngOnInit(): void { 
+    this.getData()
+  }
 
   getData(): void {
     this.fetchService

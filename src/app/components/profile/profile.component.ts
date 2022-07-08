@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { map } from 'rxjs';
 import { FetchService } from 'src/services/fetch/fetch.service';
 
 @Component({
@@ -15,9 +16,8 @@ export class ProfileComponent implements OnInit {
   ) { };
   
   ngOnInit(): void {
-    this.fetchService.dataString$.subscribe(
-      data => { this.characters =  data }
-    )
+    this.fetchService.dataString$
+    .subscribe( data => { this.characters =  data })
   }
   
   btnClick = () => {
