@@ -15,11 +15,15 @@ export class ProfileComponent implements OnInit {
     private router: Router
   ) { };
   
-  ngOnInit(): void {
-    this.fetchService.dataString$
-    .subscribe( data => { this.characters =  data })
+  ngOnInit(): void {  
+    this.getData()
   }
   
+    getData() {
+    this.fetchService.dataSource$.subscribe(
+      data => { this.characters =  data }
+      )
+    }
   btnClick = () => {
     this.router.navigateByUrl('')
   }

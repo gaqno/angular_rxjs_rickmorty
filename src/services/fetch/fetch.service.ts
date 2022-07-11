@@ -1,27 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, filter, map, Observable, of, reduce, Subject, throwError } from 'rxjs';
-import { ICharacter } from 'src/models/Character';
+import { map, Observable, Subject,  } from 'rxjs';
+import { Character } from 'src/models/Character';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FetchService {
-  private dataStringSource = new Subject<string>();
-  dataString$ = this.dataStringSource.asObservable();
+  private dataSource = new Subject<any>();
+  dataSource$ = this.dataSource.asObservable();
   baseUrl = 'https://rickandmortyapi.com/api/character';
   constructor(private http: HttpClient) { }
 
-  public getCharacters(): Observable<ICharacter[]> {
-    return this.http.get<ICharacter[]>(this.baseUrl).pipe(map((res: any) => {
+  public getCharacters(): Observable<Character[]> {
+    return this.http.get<Character[]>(this.baseUrl).pipe(map((res: any) => {
       return res.results
     }))
   }
-  public getCharacter(id: number): Observable<ICharacter[]> {
-    return this.http.get<ICharacter[]>(`${this.baseUrl}/${id}`)
+  public getCharacter(id: number): Observable<Character[]> {
+    return this.http.get<Character[]>(`${this.baseUrl}/${id}`)
   }
-  public setData(value: any) {
-    this.dataStringSource.next(value);
+  public sendData(character: any) {
+    this.dataSource.next(character);
   }
 }
-

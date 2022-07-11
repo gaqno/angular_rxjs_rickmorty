@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
-import { ICharacter } from 'src/models/Character';
+import { Character } from 'src/models/Character';
 import { FetchService } from 'src/services/fetch/fetch.service';
 
 @Component({
@@ -12,13 +12,12 @@ export class CharacterDetailsComponent implements OnInit {
   character: any;
   constructor(private fetchService: FetchService) { }
 
-  ngOnInit(): void { 
-    this.getData()
-  }
-
-  getData(): void {
-    this.fetchService
-      .getCharacters()
-      .subscribe(character => this.fetchService.setData(character))
-  }
+  ngOnInit(): void {}
+  
+  
+  getData() {
+    this.fetchService.dataSource$.subscribe(
+      data => { this.character = data }
+    )
+  }  
 }
