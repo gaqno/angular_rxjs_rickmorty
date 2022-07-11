@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs';
 import { Character } from 'src/models/Character';
-import { FetchService } from 'src/services/fetch/fetch.service';
+import { FetchService } from 'src/services/fetch.service';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +18,6 @@ export class HomeComponent implements OnInit {
   setData(): void {
     this.fetchService
       .getCharacters()
-      .subscribe(character => this.fetchService.sendData(character))
+      .subscribe((character: any) => this.fetchService.sendData(character))
   }
 }

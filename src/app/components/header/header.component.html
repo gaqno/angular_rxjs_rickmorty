@@ -1,6 +1,11 @@
 <div class="container">
   <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="">
-  <form >
-    <input id="search-input" type="text" autofocus placeholder="Procure por personagens!">
-  </form>
+  <input #searchInput type="text" autofocus placeholder="Procure por personagens!">
+  <div class="row" *ngIf="isSearching">
+      <div class="col-12 text-center">
+        <mat-card>
+          <h1>Searching ... </h1>
+        </mat-card>
+      </div>
+    </div>
 </div>
