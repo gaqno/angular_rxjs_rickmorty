@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { filter } from 'rxjs';
-import { Character } from 'src/models/Character';
-import { FetchService } from 'src/services/fetch.service';
+import { FetchService } from 'src/app/services/fetch.service';
 
 @Component({
   selector: 'app-home',

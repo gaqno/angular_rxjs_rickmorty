@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { debounceTime, distinctUntilChanged, filter, fromEvent, map, of } from 'rxjs';
-import { Character } from 'src/models/Character';
-import { FetchService } from 'src/services/fetch.service';
+import { FetchService } from 'src/app/services/fetch.service';
 
 @Component({
   selector: 'header-component',

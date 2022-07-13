@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { FetchService } from 'src/services/fetch.service';
+import { FetchService } from 'src/app/services/fetch.service';
 
 @Component({
   selector: 'profile-component',
@@ -18,8 +18,8 @@ export class ProfileComponent implements OnInit {
     this.getData()
   }
   getData() {
-  this.fetchService.characters$.subscribe(
-    data => { this.characters =  data }
+    this.fetchService.characters$.subscribe(
+      data => { this.characters = data, console.log("PROFILE:", data)  },
     )
   }
   btnClick = () => {

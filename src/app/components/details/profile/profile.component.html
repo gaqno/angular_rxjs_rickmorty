@@ -1,0 +1,44 @@
+  <div style="width: 100vw; height: 100vh; background-color: #aaa;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="">
+    <mat-card>
+        <img src="{{characters.image}}" alt="">
+        <div>
+          <h1>{{characters.name}}</h1>
+          <mat-list>
+            <mat-list-item> Gender: {{characters.gender}}  </mat-list-item>
+            <mat-list-item> Type: {{characters.type}}</mat-list-item>
+            <mat-list-item> Location: {{characters.location.name}} </mat-list-item>
+            <mat-list-item> Specie: {{characters.species}} </mat-list-item>
+            <mat-list-item> Created At: {{characters.craeted}} </mat-list-item>
+          </mat-list>
+        </div>
+        <mat-card-actions>
+          <button mat-button (click)="btnClick()">
+           Button
+          </button>   
+        </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- {
+    "id": 406,
+    "name": "Spiderweb teddy bear",
+    "status": "Alive",
+    "species": "Animal",
+    "type": "Teddy Bear",
+    "gender": "unknown",
+    "origin": {
+        "name": "Interdimensional Cable",
+        "url": "https://rickandmortyapi.com/api/location/6"
+    },
+    "location": {
+        "name": "Interdimensional Cable",
+        "url": "https://rickandmortyapi.com/api/location/6"
+    },
+    "image": "https://rickandmortyapi.com/api/character/avatar/406.jpeg",
+    "episode": [
+        "https://rickandmortyapi.com/api/episode/8"
+    ],
+    "url": "https://rickandmortyapi.com/api/character/406",
+    "created": "2018-04-15T20:45:04.863Z"
+} -->

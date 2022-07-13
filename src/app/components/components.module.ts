@@ -2,9 +2,9 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { MatCardModule } from "@angular/material/card";
 import { MaterialModule } from "../material.module";
-import { CardComponent } from "./card/card.component";
-import { HeaderComponent } from "./header/header.component";
-import { ProfileComponent } from './profile/profile.component';
+import { CardComponent } from "./home/card/card.component";
+import { HeaderComponent } from "./home/header/header.component";
+import { ProfileComponent } from './details/profile/profile.component';
 
 @NgModule({
   declarations: [

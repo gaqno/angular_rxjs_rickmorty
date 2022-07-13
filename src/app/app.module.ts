@@ -7,13 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { MaterialModule } from './material.module';
 import { ComponentsModule } from './components/components.module';
-import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CharacterDetailsComponent
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

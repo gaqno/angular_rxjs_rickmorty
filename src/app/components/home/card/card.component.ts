@@ -1,9 +1,7 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, QueryList, ViewChildren } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
-import { Subject } from 'rxjs';
-import { Character } from 'src/models/Character';
-import { FetchService } from 'src/services/fetch.service';
-import { ComponentsModule } from '../components.module';
+import { Component, ElementRef, OnInit, ViewChildren } from '@angular/core';
+import { Router } from '@angular/router';
+import { Character } from 'src/app/interface/Character';
+import { FetchService } from 'src/app/services/fetch.service';
 
 @Component({
   selector: 'card-component',
@@ -28,7 +26,7 @@ export class CardComponent implements OnInit {
     this.fetchService.characters$.subscribe(
       data => {
         this.characters = data;
-        console.log(data)
+        console.log('CARD:', data)
       }
     )
   }
